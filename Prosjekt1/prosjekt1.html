@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset = "UTF-8">
+    <link rel="stylesheet" href="./stylesheet.css"> <!--import .css style--->
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico"> <!--web icon--->
+    <title>Mitt Abstrakte Bilde</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  <!--use for jquery--->
+    <script src="script.js"></script> <!--import script.js--->
+    <header>Mitt Abstrakte Bilde</header>
+</head>
+
+
+<body>
+<p>Med en lidenskap for webutvikling og arkitektur var det naturligvis et enkelt valg å skape et bilde og kunstverk som fremhevet akkurat dette.
+    Under ligger to nærmest identiske bilder. Så like samtidig så ulike. De begge representerer hjemmet til en lokal artist på en solskinnsdag, men for de få nysgjerrige kan det være mulig å beskue solen i ulike perspektiv.
+</p>
+
+<div class="art-container">
+    <div class="art-split">
+
+        <div class="grid-container">
+
+             <!--SVG--->
+            <div class="grid-item">
+                <svg id="1svg" xmlns="http://www.w3.org/2000/svg"><!-- <svg width="175" height="200"> --->
+                    <circle class="circle" id="circle1" cx="55" cy="120" r="20"  fill="yellow">
+                        <animate attributeName="r" values="20;40;20" dur="3s" begin="circle1.click" repeatCount="1"></animate>
+                    </circle>
+                    <rect x="140" y="250" width="90" height="100" style="fill: rosybrown;stroke-width:3;stroke:rgb(0,0,0)" />
+                    <rect x="160" y="310" width="25" height="40" style="fill: saddlebrown;" stroke-width="1" stroke="black"  />
+                    <polygon class="triangle1" points="185,175 140,250 230,250" style="fill:brown;stroke:black;stroke-width:1" />
+                    <ellipse cx="200" cy="285" rx="15" ry="10" style="fill:blue;stroke:black;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.3" />
+                </svg>
+            </div>
+
+
+            <!--Canvas--->
+            <div class="grid-item">
+                    <canvas id="2canvas" width="350" height="400">
+                    </canvas>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <div id ="doc-container">
+        <!-- Button --->
+        <div id="button"> Dokumentasjon</div>
+
+        <div id="info" >
+            <h2>Dokumentasjon</h2>
+            <p> Under ligger nødvendig informasjon om de ulike teknologier og bruken av de, om har bidratt til oppsettet  og funksjonaliteten for dette prosjektet.</p>
+
+                <h4>CSS Grid vs Flexbox</h4>
+                <p>Valget falt på flexbox ovenfor grid for å designe layouten til siden. Selv om Grid faktisk ble først brukt og var foretrukket (derav grid-container navnet), så endret artisten mening et stykke ut i prosjektet. Flexbox er nemlig foretrukket for 1d layout, som for denne øvingen er tilstrekkelig. Dermed gjorde Flexbox sin funksjonalitet, flytende layout og bruksområde at jeg gikk for denne løsningen, selv om Grid virket spennende å jobbe med.
+                Grid har bruksområder innenfor 2d layout, men det var her ønskelig å oppdele dimensjonsmessig utifra rad.</p>
+
+                <h3>SVG og Canvas</h3>
+                <p>SVG og Canvas har blitt brukt for å skape to identiske bilder, med lignende interaksjon. SVG presenterte en lett modefiserbar løsning. Alt av kode for det SVG-baserte bildet ble skrevet direkte i .html filen, utenom hover-funksjonaliteten. Logikken for Canvas ble skrevet i script.js filen og bydde på en litt større utfordring, da i form av interaksjonen. Av de to er SVG fortrukket, spesielt i form av interaksjonen da dette presenterte en lettere løsning. Alt fra generelt oppsett for de ulike figurene til farge-setting og funksjonalitet har blitt implementert med inspirasjon fra W3schools. For å implementere interaksjonen med SVG ble animate-funksjonaliteten brukt, og for Canvas ble event-listener brukt. </p>
+
+
+                <h4>jQuery</h4>
+                <p>jQuery sine hovedbruksområder i dette prosjektet har vært i sammenheng med Canvas, animasjon og knapp-funksjonaliteten. For å kunne implementere interaksjon gjennom .js filen, både i form av en trykk-funksjon til knappen (vis bakgrunnsinformasjon og ikke) og brukerinteraksjon over touch (solen), har da jQuery blitt importert.</p>
+
+
+                <h4>Cross browser testing</h4>
+                <p>For å sjekke at nettsiden har fungert som planlagt har layouten og funksjonalitet blitt testet i to ulike nettlesere: Google chrome og Safari. Resultatet har vært det samme uavhengig av nettleser, at nettsiden har fungert som den skal.
+                Dette har også blitt testet ved å endre størrelsen på nettleser-vindu under bruk.</p>
+
+
+                <h4>Nyttige informasjonskilder</h4>
+                <p>Ressursene gjort tilgjenglig over w3schools har vært brukt flittig gjennom hele prosjektet. Spesielt for SVG, Canvas, og Flexbox: <a href="https://www.w3schools.com">https://www.w3schools.com</a>
+                </p>
+                <p>Også ved spesifikke ting som har gjeldt opptegning av de ulike bildene har <a href="https://stackoverflow.com/">https://stackoverflow.com/<a/> vært mye brukt.
+                </p>
+                <p>For å komme inn i tankegangen av inn- og oppdeling av bildene og nettsiden, så har grid-nettsiden vært til stor hjelp for å bryte ned konseptet: <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">https://css-tricks.com/snippets/css/complete-guide-grid/ <a/>
+                </p>
+                <p> For å få til interaksjons-funksjonaliteten for SVG ble denne siden brukt: <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animate">https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animate</a></p>
+
+        </div>
+    </div>
+</body>
+
+
+<footer>
+    <h4>Av en lokal artist </h4>
+</footer>
+
+
+</html>
+

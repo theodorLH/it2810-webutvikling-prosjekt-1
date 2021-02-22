@@ -1,0 +1,127 @@
+/* Template */
+
+header{
+    text-align: center;
+    background-color: white;
+    font-family: "Verdana", serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+p {
+    font-family: verdana;
+    font-size: 10px;
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+html, body {
+    text-align: center;
+    background-color: white;
+
+
+}
+
+footer{
+    text-align: center;
+    background-color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.center {
+    margin: 0 auto 30px auto;
+}
+
+/* Art area to contain 2 pictures */
+.art-container{
+    height: 100%;
+    overflow: auto;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    justify-self: center;
+}
+
+.art-split{
+    height: 50%;
+    width: 100%;
+    min-height: 400px;
+}
+
+
+.grid-container {
+    /*display: grid;
+    grid-template-columns: auto auto;*/
+    display: flex;
+    flex-direction: row;
+    background-color: #2196F3;  //sadfghjkl
+    padding: 10px;
+    /*margin-top: 20px;
+    margin-bottom: 20px;*/
+}
+.grid-item {
+    /*background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 12px;
+    text-align: center;*/
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: row;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+
+/* Documentation area*/
+
+#doc-container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 150px;
+    margin-right: 150px;
+
+}
+
+#info{
+    display: none;
+}
+
+
+/* button */
+
+#button {
+    cursor: pointer;
+    border: 1px solid black;
+    background:  lightblue;
+    color: white;
+    padding: 14px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+#button:hover {
+    color: black;
+}
+
+
+/* Circle  */
+
+.circle:hover{
+    fill: black;
+    stroke: black;
+}
+
